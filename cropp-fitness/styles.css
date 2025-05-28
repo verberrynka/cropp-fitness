@@ -21,26 +21,25 @@
   font-style: normal;
   font-display: swap;
 }
-
-/*Нормализация блочной модели*/
+/* Block model normalization */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/*Убираем внутренние отступы слева тегам списков, у которых есть атрибут class*/
+/* remove left padding from list elements that have a class attribute */
 :where(ul, ol):where([class]) {
   padding-left: 0;
 }
 
-/*Убираем внешние отступы body и двум другим тегам, у которых есть атрибут class*/
+/* remove margins from body and two other elements that have a class attribute */
 body,
 :where(blockquote, figure):where([class]) {
   margin: 0;
 }
 
-/*Убираем внешние отступы вертикали нужным тегам, у которых есть атрибут class*/
+/* remove vertical margins from specified elements that have a class attribute */
 :where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
   margin-block: 0;
 }
@@ -49,24 +48,24 @@ body,
   margin-left: 0;
 }
 
-/*Убираем стандартный маркер маркированному списку, у которого есть атрибут class*/
+/* remove default markers from unordered lists that have a class attribute */
 :where(ul[class]) {
   list-style: none;
 }
 
-/*Упрощаем работу с изображениями*/
+/* simplify working with images */
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/*Чиним баг задержки смены цвета при взаимодействии с svg-элементами*/
+/* fix color change delay bug when interacting with sVG elements */
 svg * {
   transition-property: fill, stroke;
 }
 
-/*Наследуем свойства шрифт для полей ввода*/
+/* inherit font properties for form fields */
 input,
 textarea,
 select,
@@ -74,27 +73,27 @@ button {
   font: inherit;
 }
 
-/*Курсор-рука при наведении на элемент*/
+/* pointer cursor for interactive elements */
 button,
 label {
   cursor: pointer;
 }
 
 html {
-  /*Пригодится в большинстве ситуаций (когда, например, нужно будет "прижать" футер к низу сайта)*/
+  /* useful in most situations (e.g., when needing to "stick" footer to the bottom) */
   height: 100%;
-  /*Плавный скролл*/
+  /* smooth scrolling */
   scroll-behavior: smooth;
 }
 
 body {
-  /*Пригодится в большинстве ситуаций (когда, например, нужно будет "прижать" футер к низу сайта)*/
+  /* useful in most situations (e.g., when needing to "stick" footer to the bottom) */
   min-height: 100%;
-  /*Унифицированный интерлиньяж*/
+  /* standardized line height */
   line-height: 1.5;
 }
 
-/*Удаляем все анимации и переходы для людей, которые предпочитают их не использовать*/
+/* remove all animations and transitions for people who prefer not to use them */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -104,7 +103,7 @@ body {
   }
 }
 
-/*global variables*/
+/* global variables */
 :root {
   --color-dark: #000000;
   --color-light: #ffffff;
