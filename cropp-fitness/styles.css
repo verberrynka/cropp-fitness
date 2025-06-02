@@ -1,3 +1,4 @@
+/* add fonts */
 @font-face {
   font-family: "Heebo";
   src: url("./assets/fonts/Heebo-Light.woff2") format("woff2");
@@ -21,7 +22,8 @@
   font-style: normal;
   font-display: swap;
 }
-/* Block model normalization */
+
+/* block model normalization */
 *,
 *::before,
 *::after {
