@@ -55,10 +55,6 @@ body,
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 /* simplify working with images */
 img {
   display: block;
@@ -69,6 +65,16 @@ img {
 /* fix color change delay bug when interacting with sVG elements */
 svg * {
   transition-property: fill, stroke;
+}
+
+/* remove underline from links */
+a {
+  text-decoration: none;
+}
+
+/* remove default button border */
+button {
+  border: none;
 }
 
 /* inherit font properties for form fields */
@@ -159,18 +165,36 @@ svg * {
   transition-duration: var(--transition-duration);
 }
 
-.container {
-  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
-  margin-inline: auto;
-  padding-inline: var(--container-padding-x);
-}
-
 .link {
   color: var(--color-light);
 }
 
 .link:hover {
   color: var(--color-light-gray);
+}
+
+.button {
+  display: inline-flex;
+  height: 38px;
+  padding-inline: 26px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+}
+
+.button:hover {
+  background-color: var(--color-light-gray);
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
 }
 
 .header {
