@@ -175,9 +175,10 @@ svg * {
 
 .button {
   display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
   height: 38px;
   padding-inline: 26px;
-  align-items: center;
   font-weight: 700;
   font-size: 12px;
   line-height: 24px;
@@ -191,6 +192,16 @@ svg * {
   background-color: var(--color-light-gray);
 }
 
+.button.transparent {
+  position: relative;
+  height: var(--input-height);
+  padding-left: 31px;
+  padding-right: 80px;
+  color: var(--color-light);
+  background-color: transparent;
+  border: var(--border);
+}
+
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
@@ -202,6 +213,11 @@ svg * {
   justify-content: space-between;
   align-items: center;
   column-gap: 20px;
+  padding-inline: 32px;
+}
+
+.header__logo {
+  flex-shrink: 0;
 }
 
 .header__menu-list {
@@ -228,4 +244,35 @@ svg * {
   height: 5px;
   border-radius: 50%;
   background-color: currentColor;
+}
+
+.header__actions {
+  display: flex;
+  column-gap: 39px;
+}
+
+.header__burger-button {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  row-gap: 4px;
+  padding-left: 8px;
+  background-color: transparent;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  color: var(--color-light);
+}
+
+.header__burger-button:hover {
+  color: var(--color-light-gray);
+  border-color: currentColor;
+}
+
+.header__burger-button-line {
+  width: 6px;
+  height: 1px;
+  background-color: currentColor;
+  box-shadow: 17px 0 0 currentColor;
 }
