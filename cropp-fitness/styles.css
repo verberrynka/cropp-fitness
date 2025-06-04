@@ -223,6 +223,7 @@ svg * {
 .header__menu-list {
   display: flex;
   column-gap: 50px;
+  flex-wrap: wrap;
 }
 
 .header__menu-link {
@@ -275,4 +276,44 @@ svg * {
   height: 1px;
   background-color: currentColor;
   box-shadow: 17px 0 0 currentColor;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    flex-wrap: wrap;
+    padding-top: 20px;
+    row-gap: 10px;
+    padding-inline: 15px;
+  }
+
+  .header__menu {
+    order: 1;
+    flex-basis: 100%;
+  }
+
+  .header__menu-link {
+    height: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .button {
+    padding-inline: 18px;
+  }
+
+  .header {
+    padding-top: 10px;
+  }
+
+  .header__menu-list {
+    column-gap: 24px;
+  }
+
+  .header__menu-link {
+    height: 32px;
+  }
+
+  .header__actions {
+    column-gap: 15px;
+  }
 }
