@@ -277,7 +277,7 @@ svg * {
   padding-left: 8px;
   background-color: transparent;
   border: var(--border);
-  border-radius: var(--border-radius);
+  border-radius: 50%;
   color: var(--color-light);
 }
 
