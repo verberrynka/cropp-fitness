@@ -293,6 +293,78 @@ svg * {
   box-shadow: 17px 0 0 currentColor;
 }
 
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  min-height: 985px;
+  padding: 34px 71px;
+  color: var(--color-light);
+  background-color: var(--color-darK-alternate);
+}
+
+.banner__content {
+  text-transform: uppercase;
+}
+
+.banner__info {
+  display: flex;
+  align-items: end;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.27;
+}
+
+.banner__info::before {
+  content: "";
+  width: 194px;
+  aspect-ratio: 1;
+  margin-right: 30px;
+  background: url(./assets/icons/bold-arrow-down-right.svg) center/contain
+    no-repeat;
+}
+
+.banner__title {
+  font-size: 360px;
+  line-height: 1;
+}
+
+.banner__pagination-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 14px;
+}
+
+.banner__pagination-item {
+  display: flex;
+}
+
+.banner__pagination-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  background-color: transparent;
+  border: none;
+}
+
+.banner__pagination-button::after {
+  content: "";
+  width: 10px;
+  aspect-ratio: 1;
+  border: var(--border);
+  border-radius: 50%;
+  transition-duration: var(--transition-duration);
+}
+
+.banner__pagination-button.selected::after {
+  background-color: var(--color-light);
+}
+
+.banner__pagination-button:not(.selected):hover::after {
+  border-color: var(--color-light-gray);
+}
+
 @media (max-width: 1024px) {
   .header {
     flex-wrap: wrap;
