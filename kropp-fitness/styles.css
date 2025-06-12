@@ -364,6 +364,7 @@ svg * {
   background-color: var(--color-light);
 }
 
+/* styles the ::after element when non-selected pagination buttons are hovered */
 .banner__pagination-button:not(.selected):hover::after {
   border-color: var(--color-light-gray);
 }
