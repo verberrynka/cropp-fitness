@@ -202,6 +202,17 @@ svg * {
   transition-duration: var(--transition-duration);
 }
 
+/* remove all vertical spacing from paragraphs */
+p {
+  margin-block: 0;
+}
+
+/* add bottom margin to all paragraphs
+except paragraphs with class and the last paragraph one in container */
+p:not([class]):not(:last-child) {
+  margin-bottom: 24px;
+}
+
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
@@ -424,6 +435,19 @@ svg * {
 
 .motivation__card-content {
   padding-left: 35px;
+}
+
+.motivation__card-title:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.motivaton__card-description {
+  max-width: 400px;
+}
+
+.motivaton__card-description:not(:last-child) {
+  max-width: 400px;
+  margin-bottom: 37px;
 }
 
 @media (max-width: 1024px) {
