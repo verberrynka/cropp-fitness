@@ -160,6 +160,12 @@ h6 {
   text-transform: uppercase;
 }
 
+.title-medium {
+  font-size: 40px;
+  line-height: 1.3;
+  color: var(--color-light);
+}
+
 a,
 button,
 input,
@@ -367,6 +373,29 @@ svg * {
 /* styles the ::after element when non-selected pagination buttons are hovered */
 .banner__pagination-button:not(.selected):hover::after {
   border-color: var(--color-light-gray);
+}
+
+.motivation__item:nth-child(even) {
+  background-color: var(--color-darK-alternate);
+}
+
+.motivation__item:nth-child(even) .motivation__card {
+  flex-direction: row-reverse;
+}
+
+.motivation__card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: clamp(30px, 10.42vw, 200px);
+}
+
+.motivation__card-image {
+  margin-block: -60px;
+}
+
+.motivation__card-content {
+  padding-left: 35px;
 }
 
 @media (max-width: 1024px) {
