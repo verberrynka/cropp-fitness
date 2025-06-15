@@ -72,9 +72,10 @@ a {
   text-decoration: none;
 }
 
-/* remove default button border */
+/* remove default button border and decoration */
 button {
   border: none;
+  text-decoration: none;
 }
 
 /* inherit font properties for form fields */
@@ -134,7 +135,7 @@ body {
   --container-width: 1300px;
   --container-padding-x: 15px;
 
-  --transition-duration: 0.2s;
+  --transition-duration: 0.3s;
 
   --header-height: 90px;
 }
@@ -240,6 +241,7 @@ p:not([class]):not(:last-child) {
   text-transform: uppercase;
   background-color: var(--color-light);
   border-radius: var(--border-radius);
+  transition-duration: var(--transition-duration);
 }
 
 .button:hover {
@@ -248,12 +250,35 @@ p:not([class]):not(:last-child) {
 
 .button.transparent {
   position: relative;
-  height: var(--input-height);
+  height: var(--input-and-button-height);
   padding-left: 31px;
   padding-right: 80px;
   color: var(--color-light);
   background-color: transparent;
   border: var(--border);
+}
+
+.button.transparent::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 100%;
+  aspect-ratio: 1;
+  background: url("./assets/icons/arrow-top-right-light.svg") center/70%
+    no-repeat;
+  border-radius: 50%;
+  border: var(--border);
+}
+
+.button.transparent:hover {
+  color: var(--color-dark);
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-dark-gray);
+}
+
+.button.transparent:hover::after {
+  background-image: url("./assets/icons/arrow-top-right-dark.svg");
+  border: 1px solid var(--color-dark-gray);
 }
 
 .visually-hidden {
