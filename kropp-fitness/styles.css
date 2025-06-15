@@ -466,11 +466,11 @@ p:not([class]):not(:last-child) {
   margin-bottom: 14px;
 }
 
-.motivaton__card-description {
+.motivation__card-description {
   max-width: 400px;
 }
 
-.motivaton__card-description:not(:last-child) {
+.motivation__card-description:not(:last-child) {
   max-width: 400px;
   margin-bottom: 37px;
 }
