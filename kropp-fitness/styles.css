@@ -512,7 +512,7 @@ p:not([class]):not(:last-child) {
   }
 
   .motivation__card-image {
-    max-width: 30%;
+    max-width: 50%;
     height: auto;
     margin-block: 0;
   }
@@ -552,7 +552,7 @@ p:not([class]):not(:last-child) {
   }
 
   .motivation__card {
-    padding-block: 38px;
+    padding-block: 30px;
     row-gap: 30px;
   }
 
