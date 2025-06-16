@@ -512,6 +512,12 @@ p:not([class]):not(:last-child) {
   }
 }
 
+@media (max-width: 1280px) {
+  .training-types__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 1024px) {
   .header {
     flex-wrap: wrap;
@@ -593,5 +599,19 @@ p:not([class]):not(:last-child) {
 
   .motivation__card-description:not(:last-child) {
     margin-bottom: 20px;
+  }
+  .training-types__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .training-types__item {
+    --trainingTypesItemBgIconSize: 50px;
+
+    row-gap: 10px;
+  }
+
+  .training-types__image {
+    max-width: 120px;
   }
 }
