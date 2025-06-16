@@ -162,7 +162,7 @@ h6 {
 }
 
 .title-medium {
-  font-size: 40px;
+  font-size: clamp(20px, 2.08vw, 40px);
   line-height: 1.3;
   color: var(--color-light);
 }
@@ -475,6 +475,12 @@ p:not([class]):not(:last-child) {
   margin-bottom: 37px;
 }
 
+@media (max-width: 1919px) {
+  .motivation__card-image {
+    margin-block: -20px;
+  }
+}
+
 @media (max-width: 1024px) {
   .header {
     flex-wrap: wrap;
@@ -499,6 +505,16 @@ p:not([class]):not(:last-child) {
 
   .banner {
     row-gap: 10px;
+  }
+
+  .motivation__card {
+    padding-block: 50px;
+  }
+
+  .motivation__card-image {
+    max-width: 30%;
+    height: auto;
+    margin-block: 0;
   }
 }
 
@@ -528,5 +544,23 @@ p:not([class]):not(:last-child) {
   }
   .banner__info::before {
     margin-right: 10px;
+  }
+
+  .motivation__card,
+  .motivation__item:nth-child(even) .motivation__card {
+    flex-direction: column-reverse;
+  }
+
+  .motivation__card {
+    padding-block: 38px;
+    row-gap: 30px;
+  }
+
+  .motivation__card-image {
+    max-width: 60%;
+  }
+
+  .motivation__card-description:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
