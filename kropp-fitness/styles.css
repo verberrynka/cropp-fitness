@@ -550,6 +550,12 @@ p:not([class]):not(:last-child) {
     var(--color-dark-alternate);
 }
 
+.join-us__video {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+}
+
 .join-us__video-play-button {
   position: absolute;
   top: 50%;
@@ -633,6 +639,7 @@ p:not([class]):not(:last-child) {
   font-size: 20px;
   line-height: 1.65;
   text-transform: uppercase;
+  text-align: center;
   color: var(--color-light);
 }
 
@@ -692,6 +699,14 @@ p:not([class]):not(:last-child) {
     max-width: 50%;
     height: auto;
     margin-block: 0;
+  }
+
+  .join-us__content {
+    padding-bottom: 80px;
+  }
+
+  .join-us__title:not(:last-child) {
+    margin-bottom: 80px;
   }
 }
 
@@ -753,5 +768,23 @@ p:not([class]):not(:last-child) {
 
   .training-types__image {
     max-width: 120px;
+  }
+
+  .join-us__video-play-button {
+    width: 140px;
+  }
+
+  .join-us__title:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .join-us__form-subtitle {
+    font-size: 16px;
+  }
+
+  .join-us__form-content {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
   }
 }
