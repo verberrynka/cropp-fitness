@@ -540,13 +540,17 @@ p:not([class]):not(:last-child) {
   font-size: 16px;
 }
 
+.join-us {
+  background-color: var(--color-dark-alternate);
+}
+
 .join-us__video-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 150px 30px;
-  background: url(./assets/images/join-us-bg.jpg) center/contain no-repeat
+  background: url(./assets/images/join-us-bg.jpg) center/cover no-repeat
     var(--color-dark-alternate);
 }
 
