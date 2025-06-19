@@ -231,6 +231,11 @@ p:not([class]):not(:last-child) {
   padding-inline: var(--container-padding-x);
 }
 
+.container-wide {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
 .link {
   color: var(--color-light);
 }
@@ -511,8 +516,6 @@ p:not([class]):not(:last-child) {
 
 .training-types {
   position: relative;
-  max-width: 1920px;
-  margin-inline: auto;
   padding-top: 70px;
   padding-bottom: 120px;
   background-color: var(--color-dark);
