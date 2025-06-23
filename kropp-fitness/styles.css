@@ -750,7 +750,7 @@ option:not(:disabled) {
   column-gap: 36px;
 }
 
-.colculate__content {
+.calculate__content {
   flex-grow: 1;
   max-width: 627px;
 }
