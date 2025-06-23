@@ -858,6 +858,12 @@ option:not(:disabled) {
   }
 }
 
+@media (max-width: 1420px) {
+  .calculate__inner.container {
+    padding-left: 45px;
+  }
+}
+
 @media (max-width: 1280px) {
   .training-types__list {
     grid-template-columns: repeat(3, 1fr);
@@ -910,6 +916,53 @@ option:not(:disabled) {
 
   .family__image {
     height: 360px;
+  }
+
+  .calculate {
+    padding-block: 100px;
+  }
+
+  .calculate__inner {
+    column-gap: 20px;
+  }
+
+  .calculate__form-content {
+    grid-template-columns: 1fr;
+  }
+
+  .calculate__form-button {
+    width: 100%;
+  }
+
+  .calculate__table :is(td, th) {
+    padding-block: 10px;
+  }
+
+  .calculate__table tfoot td {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 830px) {
+  .calculate {
+    padding-block: 60px;
+  }
+
+  .calculate__inner {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  .calculate__inner.container {
+    padding-inline: 45px;
+  }
+
+  .calculate__description {
+    max-width: 450px;
+  }
+
+  .calculate__table-wrapper::before {
+    display: none;
   }
 }
 
