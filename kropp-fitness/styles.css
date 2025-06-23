@@ -771,6 +771,10 @@ p:not([class]):not(:last-child) {
   .join-us__title:not(:last-child) {
     margin-bottom: 80px;
   }
+
+  .family__image {
+    height: 360px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -862,5 +866,18 @@ p:not([class]):not(:last-child) {
 
   .location__description:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  .family__header {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  .family__content {
+    column-gap: 12px;
+  }
+
+  .family__image {
+    height: 180px;
   }
 }
