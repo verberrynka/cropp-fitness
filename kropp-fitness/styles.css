@@ -127,6 +127,7 @@ body {
 
   --border-radius: 30px;
   --border: 1px solid var(--color-light);
+  --table-border: 1px solid var(--color-light-gray);
 
   --font-family-base: "Heebo", sans-serif;
   --font-family-accent: "Yantramanav", sans-serif;
@@ -226,6 +227,10 @@ p:not([class]):not(:last-child) {
   margin-bottom: 24px;
 }
 
+strong {
+  font-weight: 700;
+}
+
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
@@ -315,7 +320,8 @@ p:not([class]):not(:last-child) {
   border-radius: var(--border-radius);
 }
 
-.input::placeholder {
+.input::placeholder,
+select.input:invalid {
   color: var(--color-light-gray);
 }
 
@@ -327,6 +333,22 @@ p:not([class]):not(:last-child) {
   color: var(--color-dark);
   background-color: var(--color-light-gray);
   outline: none;
+}
+
+/* Remove default spin buttons in WebKit browsers (Chrome, Safari, Edge, Opera) */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Hide spin buttons */
+  margin: 0; /* Remove default margin */
+}
+
+/* Remove number input styling in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; /* Disable up/down arrows */
+}
+
+option:not(:disabled) {
+  color: var(--color-dark);
 }
 
 .visually-hidden {
@@ -714,6 +736,120 @@ p:not([class]):not(:last-child) {
 
 .family__image {
   scroll-snap-align: start;
+}
+
+.calculate {
+  padding-block: 146px;
+  background-color: var(--color-dark-alternate);
+}
+
+.calculate__inner {
+  display: flex;
+  align-items: center;
+  column-gap: 36px;
+}
+
+.colculate__content {
+  flex-grow: 1;
+  max-width: 627px;
+}
+
+.calculate__title:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.calculate__description {
+  max-width: 385px;
+}
+
+.calculate__description:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.calculate__form-content:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.calculate__form-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 30px;
+}
+
+.calculate__form-input.wide {
+  grid-column: -1 / 1;
+}
+
+.calculate__table-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 610px;
+  width: 100%;
+}
+
+.calculate__table-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-dark);
+}
+
+.calculate__table {
+  position: relative;
+  border-collapse: collapse;
+}
+
+.calculate__table :is(th, td) {
+  padding-right: 30px;
+}
+
+.calculate__table :is(th, td):not(:first-child) {
+  padding-left: 30px;
+}
+
+.calculate__table :is(th, td):not(:last-child) {
+  border-right: var(--table-border);
+}
+
+.calculate__table tbody td {
+  border-top: var(--table-border);
+}
+
+.calculate__table tbody tr:last-child td:first-child {
+  position: relative;
+}
+
+.calculate__table tbody tr:last-child td:first-child::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 1px;
+  background-color: var(--color-light-gray);
+}
+
+.calculate__table th {
+  padding-block: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+.calculate__table td {
+  padding-block: 14px;
+}
+
+.calculate__table tfoot td {
+  padding-block: 33px 0;
+  color: var(--color-light);
 }
 
 @media (max-width: 1919px) {

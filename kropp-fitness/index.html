@@ -380,7 +380,11 @@
                   placeholder="Age"
                 />
                 <label class="visually-hidden" for="gender">Gender</label>
-                <select class="calculate__form-input input" id="gender">
+                <select
+                  class="calculate__form-input input"
+                  id="gender"
+                  required
+                >
                   <option value="" disabled selected>Gender</option>
                   <option value="female">Female</option>
                   <option value="male">Male</option>
@@ -391,6 +395,7 @@
                 <select
                   class="calculate__form-input input wide"
                   id="activity-factor"
+                  required
                 >
                   <option value="" disabled selected>
                     Select an activity factor:
